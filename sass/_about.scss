@@ -1,0 +1,58 @@
+.about {
+  background-color: $bg-color-grey;
+  padding: 2em;
+  min-height: 100vh;
+  padding-top: 3em;
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  &__text {
+    &--underline {
+      transition: all 0.5s ease-in-out;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  &__image {
+    height: 50vh;
+    // border: 5px #ccc dashed;
+    margin-right: 10rem;
+
+    @include respond(tab-land) {
+      height: 40vh;
+    }
+
+    @include respond(tab-port) {
+      display: none;
+    }
+  }
+
+  &__content {
+    // height: 50vh !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-size: 2rem;
+    width: 60%;
+    height: calc(100vh - 50%);
+    padding: 3.5rem;
+
+    @include respond(tab-port) {
+      width: 100%;
+      font-size: 2.2rem;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+
+  &__buttons {
+    &-item {
+    }
+  }
+}
